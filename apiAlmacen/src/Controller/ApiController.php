@@ -9,16 +9,24 @@ use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\HttpFoundation\JsonResponse;
 
 
+
 class ApiController 
 {
+
+    private $productos= [
+        1=> "Pimiento",
+        2=> "Arroz",
+        3=> "Manzana",
+        4=> "Zanahoria",
+        5=> "Apio"
+    ];
+    
     /**
      * @Route("/api/almacenes", name="listaAlmacenes", methods={"GET"}))
      */
-     
-
     public function listaAlmacenesAction(Request $request)
     {
-        return $response = new JsonResponse(['data' => 123]);
+        return $response = new JsonResponse($this->productos);
             
         
     }
