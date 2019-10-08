@@ -4,3 +4,6 @@ export class Producto {
    proveedor: string;
    descripcion: string;
 }
+
+
+
