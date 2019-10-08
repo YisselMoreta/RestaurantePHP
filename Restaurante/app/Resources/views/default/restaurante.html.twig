@@ -1,6 +1,14 @@
 {% extends 'base.html.twig' %}
 
 {% block body %}
+   <div>
+   <h1>Nombres Restaurantes</h1>
+   </div>
+
+   <ul>
+   {% for restaurante in restaurantes %}
+        <li>{{ restaurante.nombre }}</li>
+    {% endfor %}
+   </ul>
    
-   Restaurante
 {% endblock %}
