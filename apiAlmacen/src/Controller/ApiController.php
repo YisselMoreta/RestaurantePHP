@@ -29,8 +29,10 @@ class ApiController extends AbstractController
      */
     public function listaAlmacenesAction(Request $request)
     {
-        // $response->headers->set('Access-Control-Allow-Origin', '*');
-        return $response = new JsonResponse($this->productos);
+        
+        $response =new JsonResponse($productos); 
+        $response->headers->set('Access-Control-Allow-Origin', '*');
+        return $response;
         
             
        
