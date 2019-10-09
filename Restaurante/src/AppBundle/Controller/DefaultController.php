@@ -8,7 +8,7 @@ use Symfony\Component\Routing\Annotation\Route;
 use Symfony\Component\HttpFoundation\Response;
 use AppBundle\Entity\Restaurante;
 use AppBundle\Entity\Platos;
-
+use Doctrine\Common\Collections\ArrayCollection;
 
 
 class DefaultController extends Controller

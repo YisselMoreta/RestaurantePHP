@@ -29,6 +29,13 @@ class ApiController extends AbstractController
      */
     public function listaAlmacenesAction(Request $request)
     {
+         $productos= [
+            1=> "Pimiento",
+            2=> "Arroz",
+            3=> "Manzana",
+            4=> "Zanahoria",
+            5=> "Apio"
+        ];
         
         $response =new JsonResponse($productos); 
         $response->headers->set('Access-Control-Allow-Origin', '*');
@@ -42,6 +49,7 @@ class ApiController extends AbstractController
      */
     public function listarProductos(Request $request)
     {
+      
         $repository = $this->getDoctrine()->getRepository(Producto::class);
         $productos=$repository -> findAll();
         foreach ($productos as $producto) {
