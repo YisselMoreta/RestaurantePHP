@@ -22,14 +22,14 @@
 
     <ul>
         <li>
-            <a href="{{ path('platos_index') }}">Back to the list</a>
+            <a href="{{ path('platos_index') }}">Atrás</a>
         </li>
         <li>
-            <a href="{{ path('platos_edit', { 'id': plato.id }) }}">Edit</a>
+            <a href="{{ path('platos_edit', { 'id': plato.id }) }}">Editar</a>
         </li>
         <li>
             {{ form_start(delete_form) }}
-                <input type="submit" value="Delete">
+                <input type="submit" value="Eliminar">
             {{ form_end(delete_form) }}
         </li>
     </ul>

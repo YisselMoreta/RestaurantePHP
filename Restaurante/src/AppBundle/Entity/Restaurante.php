@@ -137,4 +137,8 @@ class Restaurante
     {
         return $this->platos;
     }
+    public function __toString()
+    {
+        return '';
+    }
 }

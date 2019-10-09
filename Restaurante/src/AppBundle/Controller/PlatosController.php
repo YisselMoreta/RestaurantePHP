@@ -3,9 +3,21 @@
 namespace AppBundle\Controller;
 
 use AppBundle\Entity\Platos;
+use AppBundle\Entity\Restaurante;
+
+
+use AppBundle\Form\PlatosType;
+use AppBundle\Form\RestauranteType;
+
+use AppBundle\Repository\PlatosRepository;
+use AppBundle\Repository\RestauranteRepository;
+
+
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Method;
-use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;use Symfony\Component\HttpFoundation\Request;
+use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
+use Symfony\Component\HttpFoundation\Request;
+
 
 /**
  * Plato controller.
@@ -39,7 +51,7 @@ class PlatosController extends Controller
      */
     public function newAction(Request $request)
     {
-        $plato = new Plato();
+        $plato = new Platos();
         $form = $this->createForm('AppBundle\Form\PlatosType', $plato);
         $form->handleRequest($request);
 
@@ -133,4 +145,5 @@ class PlatosController extends Controller
             ->getForm()
         ;
     }
+    
 }

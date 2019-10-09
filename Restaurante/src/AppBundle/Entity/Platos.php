@@ -122,4 +122,9 @@ class Platos
     {
         return $this->restaurante;
     }
+
+    public function __toString()
+    {
+        return '';
+    }
 }
