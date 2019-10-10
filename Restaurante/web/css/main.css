@@ -7,15 +7,52 @@
 
 #mainNav {
   min-height: 56px;
-  background-color: #fff;
+  background-color: transparent !important;
+  
+  font-size: 1em;
+  position: absolute !important;
+  z-index: 1;
+  text-decoration:none;
+  
   
 }
+
+/* .navbar-light  {
+  background-color: #64a19d;
+  color: white !important;
+} */
+.navbar-toggler {
+  background-color: #64a19d;
+  
+  
+ 
+}
+.fa-align-justify {
+  padding-top: 0.3em;
+}
+
+
 #mainNav .btn {
  margin-right: 0.5em;
  
 }
-.container-fluid {
-  margin-top: 100px;
+body{
+ 
+  background: linear-gradient(to bottom, rgba(22, 22, 22, 0.3) 0%, rgba(146, 143, 143, 0.7) 75%, #161616 100%);
+}
+#login {
+  position: relative;
+  width: 100%;
+  height: auto;
+  min-height: 35rem;
+  padding: 15rem 0;
+  background: linear-gradient(to bottom, rgba(22, 22, 22, 0.3) 0%, rgba(22, 22, 22, 0.7) 75%, #161616 100%), url("../img/mathew-schwartz-GjzJFMnJZYg-unsplash.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: scroll;
+  background-size: 200%;
+  text-align: center;
+
 }
 
 

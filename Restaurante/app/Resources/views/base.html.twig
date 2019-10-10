@@ -8,12 +8,13 @@
         </title>
         {% block stylesheets %}
 
-            <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}"/>
+            
             <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
             
             
             <link href="https://fonts.googleapis.com/css?family=Inconsolata&display=swap" rel="stylesheet">
+
             <link href="{{ asset('css/main.css') }}" type="text/css" rel="stylesheet" />
 
         {% endblock %}
@@ -24,42 +25,46 @@
         
 
         <!-- Navigation -->
-    <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
-    <div class="container">
-      
-     
-      
-      <div class="collapse navbar-collapse" id="navbarResponsive">
-        <ul class="navbar-nav ml-auto">
-          <li class="nav-item">
-            <a class="btn btn-primary js-scroll-trigger" href="{{path('homepage')}}">Home</a>
-          </li>
-          <li class="nav-item">
-           <div class="dropdown">
-        <button class="btn btn-primary js-scroll-trigger" type="button" id="dropdownMenuButton" data-toggle="dropdown"      aria-haspopup="true" aria-expanded="false">
-        Restaurantes
-        </button>
-     <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-        <a class="dropdown-item" href="{{path('restaurante',{'sede':'Madrid'})}}">Madrid</a>
-        <a class="dropdown-item" href="{{path('restaurante',{'sede':'Valencia'})}}">Valencia</a>
-        <a class="dropdown-item" href="{{path('restaurante',{'sede':'Barcelona'})}}">Barcelona</a>
-        <a class="dropdown-item" href="{{path('restaurante',{'sede':'Asturias'})}}">Asturias</a>
+        <div class="containerNavegacion" >
+        <nav class="navbar navbar-expand-lg " id="mainNav">
+    
+    <button class="navbar-toggler btn-primary" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"><i class="fas fa-align-justify"></i></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNavDropdown">
+    <ul class="navbar-nav">
+      <li class="nav-item active">
+        <a class="nav-link btn btn-primary js-scroll-trigger" href="{{path('homepage')}}">Home <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link btn btn-primary js-scroll-trigger" href="{{path('contacto')}}">Contacto</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link btn btn-primary js-scroll-trigger" href="{{path('registro')}}">Registro</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link btn btn-primary js-scroll-trigger" href="{{path('login')}}">Login</a>
+      </li>
+      <li class="nav-item">
+        {% if is_granted('IS_AUTHENTICATED_FULLY') %}
+        <a class="nav-link btn btn-primary js-scroll-trigger" href="{{path('logout')}}">Logout</a>
+        {% endif %}
+      </li>
+      <li class="nav-item dropdown">
+        <a class="nav-link  btn btn-primary js-scroll-trigger" href="{{path('restaurante')}}" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Restaurantes
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+          <a class="dropdown-item" href="{{path('restaurante',{'sede':'Madrid'})}}">Madrid</a>
+          <a class="dropdown-item" href="{{path('restaurante',{'sede':'Valencia'})}}">Valencia</a>
+          <a class="dropdown-item" href="{{path('restaurante',{'sede':'Barcelona'})}}">Barcelona</a>
+           <a class="dropdown-item" href="{{path('restaurante',{'sede':'Asturias'})}}">Asturias</a>
         </div>
-        </div>
-          </li>
-          <li class="nav-item">
-            <a class="btn btn-primary js-scroll-trigger" href="{{path('contacto')}}">Contacto</a>
-             {% if is_granted('IS_AUTHENTICATED_FULLY') %}
-            <a class="btn btn-primary js-scroll-trigger" href="{{path('logout')}}">Logout</a>
-          {% endif %}
-          </li>
-           
-        </ul>
-      </div>
-    </div>
-  </nav>
-
-
+      </li>
+    </ul>
+  </div>
+</nav>
+</div>
         
         <div class="container-fluid"> 
         {% block body %}{% endblock %}
