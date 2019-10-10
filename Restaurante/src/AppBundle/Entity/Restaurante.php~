@@ -3,6 +3,7 @@
 namespace AppBundle\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
+use Doctrine\Common\Collections\ArrayCollection;
 
 /**
  * Restaurante
@@ -102,5 +103,42 @@ class Restaurante
     {
         return $this->localidad;
     }
-}
 
+    /**
+     * Add plato
+     *
+     * @param \AppBundle\Entity\Platos $plato
+     *
+     * @return Restaurante
+     */
+    public function addPlato(\AppBundle\Entity\Platos $plato)
+    {
+        $this->platos[] = $plato;
+
+        return $this;
+    }
+
+    /**
+     * Remove plato
+     *
+     * @param \AppBundle\Entity\Platos $plato
+     */
+    public function removePlato(\AppBundle\Entity\Platos $plato)
+    {
+        $this->platos->removeElement($plato);
+    }
+
+    /**
+     * Get platos
+     *
+     * @return \Doctrine\Common\Collections\Collection
+     */
+    public function getPlatos()
+    {
+        return $this->platos;
+    }
+    public function __toString()
+    {
+        return '';
+    }
+}

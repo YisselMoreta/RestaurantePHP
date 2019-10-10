@@ -1,13 +1,14 @@
 {% extends 'base.html.twig' %}
 
+
 {% block body %}
 <!-- Header -->
   <header class="masthead">
     <div class="container d-flex h-100 align-items-center">
       <div class="mx-auto text-center">
-        <h1 class="mx-auto my-0 text-uppercase">Grayscale</h1>
-        <h2 class="text-white-50 mx-auto mt-2 mb-5">A free, responsive, one page Bootstrap theme created by Start Bootstrap.</h2>
-        <a href="#about" class="btn btn-primary js-scroll-trigger">Get Started</a>
+        <h1 class="mx-auto my-0 text-uppercase">Laura's</h1>
+        <h2 class="text-white-45 mx-auto mt-2 mb-5">Restaurantes contemporáneos y creativos, ven a conocernos!</h2>
+        <a href="#reservas"  class="btn btn-primary js-scroll-trigger">Reservas</a>
       </div>
     </div>
   </header>
@@ -17,28 +18,28 @@
     <div class="container">
       <div class="row">
         <div class="col-lg-8 mx-auto">
-          <h2 class="text-white mb-4">Built with Bootstrap 4</h2>
-          <p class="text-white-50">Grayscale is a free Bootstrap theme created by Start Bootstrap. It can be yours right now, simply download the template on
-            <a href="http://startbootstrap.com/template-overviews/grayscale/">the preview page</a>. The theme is open source, and you can use it for any purpose, personal or commercial.</p>
+          <h2 class="text-white mb-4">De la huerta a tu plato!</h2>
+          <p class="text-white-50">Todos nuestros platos son de origen natural y cultivados en nuestras propias instalaciones. <br>
+            <a href="{{path('platos_index')}}">Ver platos 😃 </a></p>
         </div>
       </div>
-      <img src="img/ipad.png" class="img-fluid" alt="">
+      <img src="{{asset('img/james-harris-HYqMhq4gz8c-unsplash.jpg')}}" class="img-fluid" />
     </div>
   </section>
 
-  <!-- Projects Section -->
+  <!-- Project Section -->
   <section id="projects" class="projects-section bg-light">
     <div class="container">
 
       <!-- Featured Project Row -->
       <div class="row align-items-center no-gutters mb-4 mb-lg-5">
         <div class="col-xl-8 col-lg-7">
-          <img class="img-fluid mb-3 mb-lg-0" src="img/bg-masthead.jpg" alt="">
+          <img class="img-fluid mb-3 mb-lg-0" src="{{asset('img/alex-block-bBS09BeDnFY-unsplash.jpg')}}" alt="">
         </div>
         <div class="col-xl-4 col-lg-5">
           <div class="featured-text text-center text-lg-left">
-            <h4>Shoreline</h4>
-            <p class="text-black-50 mb-0">Grayscale is open source and MIT licensed. This means you can use it for any project - even commercial projects! Download it, customize it, and publish your website!</p>
+            <h4>Lorem ipsum dolor sit amet.</h4>
+            <p class="text-black-50 mb-0">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Laudantium numquam perferendis asperiores, vitae delectus quod suscipit hic consequuntur distinctio quas? </p>
           </div>
         </div>
       </div>
@@ -46,14 +47,14 @@
       <!-- Project One Row -->
       <div class="row justify-content-center no-gutters mb-5 mb-lg-0">
         <div class="col-lg-6">
-          <img class="img-fluid" src="img/demo-image-01.jpg" alt="">
+          <img class="img-fluid" src="{{asset('img/shayda-torabi-3iexvMShGfQ-unsplash.jpg')}}" alt="">
         </div>
         <div class="col-lg-6">
           <div class="bg-black text-center h-100 project">
             <div class="d-flex h-100">
               <div class="project-text w-100 my-auto text-center text-lg-left">
-                <h4 class="text-white">Misty</h4>
-                <p class="mb-0 text-white-50">An example of where you can put an image of a project, or anything else, along with a description.</p>
+                <h4 class="text-white">Pescado</h4>
+                <p class="mb-0 text-white-50">Vamos todos los días al mercado para hacernos con los mejores y cocinártelos, frescos, frescos! 😋</p>
                 <hr class="d-none d-lg-block mb-0 ml-0">
               </div>
             </div>
@@ -64,14 +65,14 @@
       <!-- Project Two Row -->
       <div class="row justify-content-center no-gutters">
         <div class="col-lg-6">
-          <img class="img-fluid" src="img/demo-image-02.jpg" alt="">
+          <img class="img-fluid" src="{{asset('img/igor-starkov-8PW9y8XQTFg-unsplash.jpg')}}" />
         </div>
         <div class="col-lg-6 order-lg-first">
           <div class="bg-black text-center h-100 project">
             <div class="d-flex h-100">
               <div class="project-text w-100 my-auto text-center text-lg-right">
-                <h4 class="text-white">Mountains</h4>
-                <p class="mb-0 text-white-50">Another example of a project with its respective description. These sections work well responsively as well, try this theme on a small screen!</p>
+                <h4 class="text-white">wau!</h4>
+                <p class="mb-0 text-white-50">Disfruta de nuestras vistas mientras te deleitas con nuestra gastronomía.</p>
                 <hr class="d-none d-lg-block mb-0 mr-0">
               </div>
             </div>
@@ -82,19 +83,31 @@
     </div>
   </section>
 
-  <!-- Signup Section -->
+  <!-- Sedes Section -->
   <section id="signup" class="signup-section">
     <div class="container">
       <div class="row">
         <div class="col-md-10 col-lg-8 mx-auto text-center">
 
-          <i class="far fa-paper-plane fa-2x mb-2 text-white"></i>
-          <h2 class="text-white mb-5">Subscribe to receive updates!</h2>
+          <i class="fab fa-angellist"></i>
+          <h2 class="text-white mb-5">Disponemos de varias sedes en toda la península</h2>
 
-          <form class="form-inline d-flex">
-            <input type="email" class="form-control flex-fill mr-0 mr-sm-2 mb-3 mb-sm-0" id="inputEmail" placeholder="Enter email address...">
-            <button type="submit" class="btn btn-primary mx-auto">Subscribe</button>
-          </form>
+          
+            
+            <a href="{{path('restaurante')}}" class="btn btn-primary">Ver sedes </a>
+          
+
+        </div>
+      </div>
+    </div>
+  </section>
+   <!-- Calendar Section -->
+  <section id="reservas" class="signup-section">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-10 col-lg-8 mx-auto text-center">
+
+          <iframe src="https://calendar.google.com/calendar/embed?height=600&amp;wkst=1&amp;bgcolor=%237986CB&amp;ctz=Europe%2FMadrid&amp;src=bWlqdWFuYmViZUBnbWFpbC5jb20&amp;src=YWRkcmVzc2Jvb2sjY29udGFjdHNAZ3JvdXAudi5jYWxlbmRhci5nb29nbGUuY29t&amp;src=ZzZoNmIybmE5ZW80dG5obWU4MG8zM3EzZW9AZ3JvdXAuY2FsZW5kYXIuZ29vZ2xlLmNvbQ&amp;src=ZW4uc3BhaW4jaG9saWRheUBncm91cC52LmNhbGVuZGFyLmdvb2dsZS5jb20&amp;color=%23E67C73&amp;color=%2333B679&amp;color=%23E67C73&amp;color=%230B8043&amp;hl=es&amp;showTz=0&amp;showCalendars=0&amp;showTabs=0&amp;showPrint=0&amp;showDate=1&amp;showTitle=0" style="border-width:0" width="300" height="300" frameborder="0" scrolling="no"></iframe>
 
         </div>
       </div>
@@ -111,9 +124,9 @@
           <div class="card py-4 h-100">
             <div class="card-body text-center">
               <i class="fas fa-map-marked-alt text-primary mb-2"></i>
-              <h4 class="text-uppercase m-0">Address</h4>
+              <h4 class="text-uppercase m-0">Dirección</h4>
               <hr class="my-4">
-              <div class="small text-black-50">4923 Market Street, Orlando FL</div>
+              <div class="small text-black-50">C/ Maravilla, 7 28000 Madrid</div>
             </div>
           </div>
         </div>
@@ -125,7 +138,7 @@
               <h4 class="text-uppercase m-0">Email</h4>
               <hr class="my-4">
               <div class="small text-black-50">
-                <a href="#">hello@yourdomain.com</a>
+                <a href="#">restaurantesLau@molan.com</a>
               </div>
             </div>
           </div>
@@ -135,9 +148,9 @@
           <div class="card py-4 h-100">
             <div class="card-body text-center">
               <i class="fas fa-mobile-alt text-primary mb-2"></i>
-              <h4 class="text-uppercase m-0">Phone</h4>
+              <h4 class="text-uppercase m-0">Teléfono</h4>
               <hr class="my-4">
-              <div class="small text-black-50">+1 (555) 902-8832</div>
+              <div class="small text-black-50">+34 777 555 666</div>
             </div>
           </div>
         </div>
@@ -161,7 +174,7 @@
   <!-- Footer -->
   <footer class="bg-black small text-center text-white-50">
     <div class="container">
-      Copyright &copy; Your Website 2019
+      Copyright &copy; Lau Website 2019
     </div>
   </footer>
 {% endblock %}

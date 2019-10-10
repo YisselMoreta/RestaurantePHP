@@ -98,5 +98,33 @@ class Platos
     {
         return $this->descripcion;
     }
-}
 
+    /**
+     * Set restaurante
+     *
+     * @param \AppBundle\Entity\Restaurante $restaurante
+     *
+     * @return Platos
+     */
+    public function setRestaurante(\AppBundle\Entity\Restaurante $restaurante = null)
+    {
+        $this->restaurante = $restaurante;
+
+        return $this;
+    }
+
+    /**
+     * Get restaurante
+     *
+     * @return \AppBundle\Entity\Restaurante
+     */
+    public function getRestaurante()
+    {
+        return $this->restaurante;
+    }
+
+    public function __toString()
+    {
+        return '';
+    }
+}

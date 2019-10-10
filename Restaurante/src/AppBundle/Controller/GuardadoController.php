@@ -22,6 +22,6 @@ class GuardadoController extends Controller
     */
     public function restauranteGuardadoAction(Request $request)
     {
-        return new Response('<html><body>OK!</body></html>');
+        return new Response('<html><body>OK! Guardado!</body></html>');
     }
 }

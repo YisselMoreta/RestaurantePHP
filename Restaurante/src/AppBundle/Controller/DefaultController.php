@@ -57,31 +57,31 @@ class DefaultController extends Controller
          return $this->render('default/contacto.html.twig');
     }
 
-    /** 
-    * @Route("/platos", name="platos");
-    */
+    // /** 
+    // * @Route("/platos", name="platos");
+    // */
      
 
-    public function platosAction(Request $request)
-    {
-        $repository = $this->getDoctrine()->getRepository(Restaurante::class);
-        $restaurante = $repository->find(1);
+    // public function platosAction(Request $request)
+    // {
+    //     $repository = $this->getDoctrine()->getRepository(Restaurante::class);
+    //     $restaurante = $repository->find(1);
 
-        $platoFirst = new Platos();
-        $platoFirst->setNombre('Tortilla');
-        $platoFirst->setDescripcion('The best!');
+    //     $platoFirst = new Platos();
+    //     $platoFirst->setNombre('Tortilla');
+    //     $platoFirst->setDescripcion('The best!');
 
-        // relates this plato to the restaurante
-        $platoFirst->setrestaurante($restaurante);
+    //     // relates this plato to the restaurante
+    //     $platoFirst->setrestaurante($restaurante);
 
-        $entityManager = $this->getDoctrine()->getManager();
-        $entityManager->persist($platoFirst);
-        $entityManager->flush();
+    //     $entityManager = $this->getDoctrine()->getManager();
+    //     $entityManager->persist($platoFirst);
+    //     $entityManager->flush();
 
-        return new Response(
-            $platoFirst->getNombre()
-        );
-    }
+    //     return new Response(
+    //         $platoFirst->getNombre()
+    //     );
+    // }
     
 }
 

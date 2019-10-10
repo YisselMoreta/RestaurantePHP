@@ -33,7 +33,7 @@ class RestauranteController extends Controller
 
             
         
-        if ($form->isSubmitted() && $form->isValid()) {
+        if ($form->isSubmitted() && $form->isValid()) { //VALIDACION!!
             // $form->getData() holds the submitted values
             // but, the original `$task` variable has also been updated
             $restaurante = $form->getData();
