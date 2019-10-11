@@ -37,4 +37,4 @@ security:
             #form_login: ~
     access_control:
     - { path: '^/login', roles: IS_AUTHENTICATED_ANONYMOUSLY }
-    - { path: '^/restaurante', roles: ROLE_ADMIN }            
+    # - { path: '^/restaurante', roles: ROLE_ADMIN }            

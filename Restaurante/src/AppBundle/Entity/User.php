@@ -32,11 +32,7 @@ class User implements UserInterface
      */
     private $username;
 
-    /**
-     * @Assert\NotBlank()
-     * @Assert\Length(max=4096)
-     */
-     
+
     private $plainPassword;
 
     /**
@@ -55,7 +51,7 @@ class User implements UserInterface
 
     public function __construct()
     {
-        $this->roles = ['ROLE_USER'];
+        $this->roles = json_encode(['ROLE_USER']);
     }
 
     /**
@@ -147,7 +143,7 @@ class User implements UserInterface
      */
     public function setRoles($roles)
     {
-        $this->roles = $roles;
+        $this->roles = json_encode($roles);
 
         return $this;
     }

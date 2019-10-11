@@ -22,12 +22,15 @@ class RegistroController extends Controller
  
          // 2) handle the submit (will only happen on POST)
          $form->handleRequest($request);
+         dump($form->getErrors());
          if ($form->isSubmitted() && $form->isValid()) {
+
  
              // 3) Encode the password (you could also do this via Doctrine listener)
              $password = $passwordEncoder->encodePassword($user, $user->getPlainPassword());
              $user->setPassword($password);
  
+             dump($user);
              // 4) save the User!
              $entityManager = $this->getDoctrine()->getManager();
              $entityManager->persist($user);
@@ -36,6 +39,7 @@ class RegistroController extends Controller
              // ... do any other work - like sending them an email, etc
              // maybe set a "flash" success message for the user
  
+           
              return $this->redirectToRoute('homepage');
          }
  

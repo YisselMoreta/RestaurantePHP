@@ -52,9 +52,96 @@ body{
   background-attachment: scroll;
   background-size: 200%;
   text-align: center;
+  font-size: 1.3em;
+  font-weight: bold;
 
 }
+#registroContainer {
+  position: relative;
+  width: 100%;
+  height: auto;
+  min-height: 35rem;
+  padding: 15rem 10rem;
+  background: linear-gradient(to bottom, rgba(22, 22, 22, 0.3) 0%, rgba(22, 22, 22, 0.7) 75%, #161616 100%), url("../img/mathew-schwartz-GjzJFMnJZYg-unsplash.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: scroll;
+  background-size: 200%;
+  text-align: center;
+  font-size: 1.2em;
+  font-weight: bold;
+  
+  
 
+}
+.d-flex {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+ 
+}
+#registroBoton {
+  margin: 2em;
+  
+}
+#restauranteContainer {
+  position: relative;
+  width: 100%;
+  height: auto;
+  min-height: 35rem;
+  padding: 5rem 10rem;
+  background: linear-gradient(to bottom, rgba(22, 22, 22, 0.3) 0%, rgba(22, 22, 22, 0.7) 75%, #161616 100%), url("../img/mathew-schwartz-GjzJFMnJZYg-unsplash.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: scroll;
+  background-size: 200%;
+  text-align: center;
+  font-size: 1.2em;
+  font-weight: bold;
+  color: white;
+  
+}
+.list-group-item{
+  background-color: #64a19d;
+}
+label {
+  color: white;
+}
+.nuevoRestaurante {
+  padding: 0rem 2rem;
+  
+}
+#restaurante_save {
+  box-shadow: 0 0.1875rem 0.1875rem 0 rgba(0, 0, 0, 0.1) !important;
+  padding: 1.25rem 1.5rem;
+  font-family: 'Inconsolata', monospace;
+  font-size: 80%;
+  text-transform: uppercase;
+  letter-spacing: .10rem;
+  border: 0;
+  background-color: #64a19d;
+  color: #fff;
+  margin: 2em;
+  border-radius: 2em;
+
+}
+#contacto {
+  position: relative;
+  width: 100%;
+  height: auto;
+  min-height: 35rem;
+  padding: 3rem 10rem;
+  background: linear-gradient(to bottom, rgba(22, 22, 22, 0.3) 0%, rgba(22, 22, 22, 0.7) 75%, #161616 100%), url("../img/mathew-schwartz-GjzJFMnJZYg-unsplash.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: scroll;
+  background-size: 200%;
+  text-align: center;
+  font-size: 1.2em;
+  font-weight: bold;
+  color: white;
+  
+}
 
 
 

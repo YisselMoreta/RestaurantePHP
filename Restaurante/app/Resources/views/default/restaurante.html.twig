@@ -1,15 +1,17 @@
 {% extends 'base.html.twig' %}
 
 {% block body %}
-   <div>
-   <h1>Nombres Restaurantes</h1>
-   </div>
-
-   <ul>
+  
+<div class="d-flex flex-row " id="restauranteContainer">
+   <ul class="list-group">
   {% for restaurante in restaurantes %}
-        <li>{{ restaurante.nombre }}</li>
+        <li class="list-group-item">{{ restaurante.nombre }}</li>
+        
     {% endfor %}
    </ul>
+  
+</div>
+
 
    
    
