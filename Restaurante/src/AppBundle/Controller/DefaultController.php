@@ -43,9 +43,10 @@ class DefaultController extends Controller
 
     public function sedesAction(Request $request, $sede)
     {
-        
-         return $this->render('default/restaurante.html.twig',['sede'=>$sede]);
+       
+        return $this->render('default/restaurante.html.twig',['sede'=>$sede]);
     }
+    
     /** 
     * @Route("restaurante/contacto", name="contacto");
     */

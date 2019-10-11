@@ -36,6 +36,20 @@
       <li class="nav-item active">
         <a class="nav-link btn btn-primary js-scroll-trigger" href="{{path('homepage')}}">Home <span class="sr-only">(current)</span></a>
       </li>
+      <li class="nav-item active">
+        <a class="nav-link btn btn-primary js-scroll-trigger" href="{{path('restaurante')}}">Restaurantes <span class="sr-only">(current)</span></a>
+      </li>
+      {# <li class="nav-item dropdown">
+        <a class="nav-link  btn btn-primary js-scroll-trigger" href="{{path('restaurante')}}" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Restaurantes
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+          <a class="dropdown-item" href="{{path('restaurante',{'sede':'Madrid'})}}">Madrid</a>
+          <a class="dropdown-item" href="{{path('restaurante',{'sede':'Valencia'})}}">Valencia</a>
+          <a class="dropdown-item" href="{{path('restaurante',{'sede':'Barcelona'})}}">Barcelona</a>
+           <a class="dropdown-item" href="{{path('restaurante',{'sede':'Asturias'})}}">Asturias</a>
+        </div>
+      </li> #}
       <li class="nav-item">
         <a class="nav-link btn btn-primary js-scroll-trigger" href="{{path('contacto')}}">Contacto</a>
       </li>
@@ -50,17 +64,7 @@
         <a class="nav-link btn btn-primary js-scroll-trigger" href="{{path('logout')}}">Logout</a>
         {% endif %}
       </li>
-      <li class="nav-item dropdown">
-        <a class="nav-link  btn btn-primary js-scroll-trigger" href="{{path('restaurante')}}" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          Restaurantes
-        </a>
-        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-          <a class="dropdown-item" href="{{path('restaurante',{'sede':'Madrid'})}}">Madrid</a>
-          <a class="dropdown-item" href="{{path('restaurante',{'sede':'Valencia'})}}">Valencia</a>
-          <a class="dropdown-item" href="{{path('restaurante',{'sede':'Barcelona'})}}">Barcelona</a>
-           <a class="dropdown-item" href="{{path('restaurante',{'sede':'Asturias'})}}">Asturias</a>
-        </div>
-      </li>
+      
     </ul>
   </div>
 </nav>

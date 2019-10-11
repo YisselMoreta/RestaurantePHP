@@ -17,10 +17,7 @@
   
 }
 
-/* .navbar-light  {
-  background-color: #64a19d;
-  color: white !important;
-} */
+
 .navbar-toggler {
   background-color: #64a19d;
   
@@ -56,6 +53,14 @@ body{
   font-weight: bold;
 
 }
+.form-group > input {
+  all: unset;
+  border: 2px solid white;
+  border-radius: 2em;
+  margin-right: 1em;
+  background: transparent;
+}
+
 #registroContainer {
   position: relative;
   width: 100%;
@@ -73,6 +78,13 @@ body{
   
   
 
+}
+input {
+  all: unset;
+  border: 2px solid white;
+  border-radius: 2em;
+  margin-right: 1em;
+  background: transparent;
 }
 .d-flex {
   display: flex;
@@ -193,12 +205,14 @@ label {
   -webkit-text-fill-color: transparent;
   -webkit-background-clip: text;
   background-clip: text;
+  padding: 5rem 0;
 }
 
 .masthead h2 {
   max-width: 20rem;
   font-size: 1rem;
   color: white;
+  
   
 }
 
