@@ -42,7 +42,7 @@ body{
   width: 100%;
   height: auto;
   min-height: 35rem;
-  padding: 15rem 0;
+  padding: 10rem 0;
   background: linear-gradient(to bottom, rgba(22, 22, 22, 0.3) 0%, rgba(22, 22, 22, 0.7) 75%, #161616 100%), url("../img/mathew-schwartz-GjzJFMnJZYg-unsplash.jpg");
   background-position: center;
   background-repeat: no-repeat;
@@ -60,13 +60,16 @@ body{
   margin-right: 1em;
   background: transparent;
 }
+.form-group > input:focus {
+  background-color: lightblue;
+}
 
 #registroContainer {
   position: relative;
   width: 100%;
   height: auto;
   min-height: 35rem;
-  padding: 15rem 10rem;
+  padding: 7.2rem 10rem;
   background: linear-gradient(to bottom, rgba(22, 22, 22, 0.3) 0%, rgba(22, 22, 22, 0.7) 75%, #161616 100%), url("../img/mathew-schwartz-GjzJFMnJZYg-unsplash.jpg");
   background-position: center;
   background-repeat: no-repeat;
@@ -79,12 +82,19 @@ body{
   
 
 }
+ul {
+  list-style: none;
+}
 input {
   all: unset;
   border: 2px solid white;
   border-radius: 2em;
   margin-right: 1em;
   background: transparent;
+  color: white;
+}
+input:focus {
+  background-color: lightblue;
 }
 .d-flex {
   display: flex;
@@ -93,8 +103,7 @@ input {
  
 }
 #registroBoton {
-  margin: 2em;
-  
+  margin: 2em; 
 }
 #restauranteContainer {
   position: relative;
@@ -121,7 +130,7 @@ label {
 }
 .nuevoRestaurante {
   padding: 0rem 2rem;
-  
+ 
 }
 #restaurante_save {
   box-shadow: 0 0.1875rem 0.1875rem 0 rgba(0, 0, 0, 0.1) !important;
@@ -137,22 +146,40 @@ label {
   border-radius: 2em;
 
 }
-#contacto {
+.contactoContainer {
   position: relative;
   width: 100%;
-  height: auto;
+  height: 100%;
   min-height: 35rem;
-  padding: 3rem 10rem;
+  padding: 5rem 10rem;
   background: linear-gradient(to bottom, rgba(22, 22, 22, 0.3) 0%, rgba(22, 22, 22, 0.7) 75%, #161616 100%), url("../img/mathew-schwartz-GjzJFMnJZYg-unsplash.jpg");
   background-position: center;
   background-repeat: no-repeat;
   background-attachment: scroll;
-  background-size: 200%;
+  background-size: 210%;
   text-align: center;
   font-size: 1.2em;
   font-weight: bold;
   color: white;
   
+}
+#platosContainer {
+  position: relative;
+  width: 100%;
+  height: auto;
+  min-height: 35rem;
+  padding: 5rem 0rem;
+  background: linear-gradient(to bottom, rgba(22, 22, 22, 0.3) 0%, rgba(22, 22, 22, 0.7) 75%, #161616 100%), url("../img/martin-widenka-tkfRSPt-jdk-unsplash.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: scroll;
+  background-size: cover;
+  text-align: center;
+  font-size: 1em;
+  font-weight: bold;
+  color: #fff;
+  
+
 }
 
 
@@ -212,8 +239,7 @@ label {
   max-width: 20rem;
   font-size: 1rem;
   color: white;
-  
-  
+
 }
 
 @media (min-width: 768px) {

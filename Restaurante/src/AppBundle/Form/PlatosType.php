@@ -34,8 +34,8 @@ class PlatosType extends AbstractType
             // used to render a select box, check boxes or radios
             // 'multiple' => true,
             // 'expanded' => true,
-        ])
-        ->add('save', SubmitType::class, ['label' => 'Crear Plato']);
+        ]);
+        // ->add('save', SubmitType::class, ['label' => 'Crear Plato']);
         
     }/**
      * {@inheritdoc}

@@ -5,14 +5,7 @@
 
 
 
-{# <div class="d-flex flex-row " id="restauranteContainer">
-   <ul class="list-group">
-  {% for restaurante in restaurantes %}
-        <li class="list-group-item">{{ restaurante.nombre }}</li>
-    {% endfor %}
-   </ul>
-  
-</div> #}
+
 <div class="d-flex flex-row " id="restauranteContainer">
 <li class="nav-item dropdown">
         <a class="nav-link  btn btn-primary js-scroll-trigger" href="{{path('restaurante')}}" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -22,7 +15,7 @@
         {% for restaurante in restaurantes %}
         
           <a class="dropdown-item" href="{{path('contacto',{'sede':'Madrid'})}}">{{ restaurante.nombre}}<br>Ciudad:{{restaurante.localidad}}</a>
-          {# <a class="dropdown-item" href="{{path('contacto',{'sede':'Valencia'})}}">{{  }}</a> #}
+        
 
           {% endfor %}
           
